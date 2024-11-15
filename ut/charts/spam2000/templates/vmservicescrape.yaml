@@ -1,0 +1,13 @@
+apiVersion: operator.victoriametrics.com/v1beta1
+kind: VMServiceScrape
+metadata:
+  name: {{ include "spam2000.fullname" . }}
+  labels:
+    {{- include "spam2000.labels" . | nindent 4 }}
+  namespace: {{ .Values.namespace }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "spam2000.selectorLabels" . | nindent 6 }}
+  endpoints:
+  - port: http

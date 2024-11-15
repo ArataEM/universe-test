@@ -1,0 +1,32 @@
+spam2000:
+  namespace: services
+
+  replicaCount: 1
+
+  image:
+    repository: andriiuni/spam2000
+    tag: "1.1394.355"
+
+  resources:
+    limits:
+      cpu: 1
+      memory: 512Mi
+    requests:
+      cpu: 500m
+      memory: 256Mi
+
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: http
+  readinessProbe:
+    httpGet:
+      path: /health
+      port: http
+
+
+victoria-metrics-k8s-stack:
+  vmsingle:
+    enabled: false
+  vmcluster:
+    enabled: true
