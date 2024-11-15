@@ -1,0 +1,9 @@
+dependencies:
+- name: victoria-metrics-k8s-stack
+  repository: https://victoriametrics.github.io/helm-charts/
+  version: 0.28.3
+- name: spam2000
+  repository: ""
+  version: 0.1.0
+digest: sha256:0ee77fe58ce2b96e728ef8bea6fcfa52347e0f2fd9bbd1e64788a023d3e4ff02
+generated: "2024-11-15T16:35:44.556281665+02:00"

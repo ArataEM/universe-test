@@ -5,17 +5,9 @@ Add Victoria Metrics chart repository
 helm repo add vm https://victoriametrics.github.io/helm-charts/
 helm repo update
 ```
-Build chart dependencies
-```
-helm dependency build ut
-```
-Create namespace
-```
-kubectl create ns vm
-```
 Install chart
 ```
-helm install ut ut -n vm
+helm install --dependency-update --create-namespace ut ut -n vm
 ```
 
 ## Grafana access
